@@ -66,6 +66,12 @@ Invites: [http://slack.mnphp.org](http://slack.mnphp.org)
 
 Meetup group: [http://www.meetup.com/mn-php/](http://www.meetup.com/mn-php/)
 
+### Software Devs of RochMN
 
+[![Slack Status](http://softwaredevslack.cube.mn/badge.svg)](https://softwaredevsofrochmn.slack.com)
+
+Slack: [https://softwaredevsofrochmn.slack.com](https://softwaredevsofrochmn.slack.com)
+
+Invites: [http://softwaredevslack.cube.mn](http://softwaredevslack.cube.mn)
 
 
