@@ -1,0 +1,31 @@
+{
+  "name": "o.hai.mn",
+  "version": "1.0.0",
+  "description": "If you're looking for the contents of this site, you probably are looking for the Github Pages branch.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "now": {
+    "alias": "o.hai.mn"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ohaimn/o.hai.mn.git"
+  },
+  "keywords": [],
+  "author": "Jim Cummins <jimthedev@gmail.com> (http://github.com/jimthedev)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ohaimn/o.hai.mn/issues"
+  },
+  "homepage": "https://github.com/ohaimn/o.hai.mn#readme",
+  "dependencies": {
+    "next": "^3.2.1",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1"
+  }
+}
