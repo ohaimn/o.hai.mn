@@ -104,17 +104,17 @@ export default () =>
       <title>O hai, Minnesota!</title>
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       <link
-        href="https://fonts.googleapis.com/css?family=Open+Sans"
+        href="//fonts.googleapis.com/css?family=Open+Sans"
         rel="stylesheet"
         type="text/css"
       />
       <link
-        href="https://fonts.googleapis.com/css?family=Alegreya:400,700"
+        href="//fonts.googleapis.com/css?family=Alegreya:400,700"
         rel="stylesheet"
         type="text/css"
       />
       <link
-        href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"
+        href="//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"
         rel="stylesheet"
         type="text/css"
       />
