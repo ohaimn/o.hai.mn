@@ -5,6 +5,8 @@
   "main": "index.js",
   "scripts": {
     "dev": "next",
+    "scale": "now scale o.hai.mn 1",
+    "deploy": "now && now alias",
     "build": "next build",
     "start": "next start",
     "test": "echo \"Error: no test specified\" && exit 1"

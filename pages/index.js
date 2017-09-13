@@ -1,5 +1,18 @@
 import Head from "next/head";
 
+const Heading = ({id, text}) => (
+  <div><a name={id}></a><h3 id={id} style={{
+    borderTop: "2px dotted #224756",
+    paddingTop: "20px",
+    marginBottom: "6px",
+    paddingBottom: "6px",
+    marginTop: "40px",
+    paddingLeft: "20px",
+    color: "#2f9e98",
+    fontSize: "30px"
+  }}><a href={'#' + id} style={{textDecoration: 'none'}}><i className="ion-link" /> {text}</a></h3></div>
+)
+
 export default () =>
   <div>
     <style global jsx>{`
@@ -19,6 +32,7 @@ export default () =>
       h1,
       h2,
       h3,
+      h3 a,
       h4 {
         font-family: 'Alegreya', serif;
       }
@@ -84,17 +98,6 @@ export default () =>
         padding-left: 5px;
         font-size: 42px;
       }
-
-      .track-type h3 {
-        border-top: 2px dotted #224756;
-        padding-top: 20px;
-        margin-bottom: 6px;
-        padding-bottom: 6px;
-        margin-top: 40px;
-        padding-left: 20px;
-        color: #2f9e98;
-        font-size: 30px;
-      }
     `}</style>
     <Head>
       <meta charset="UTF-8" />
@@ -107,6 +110,11 @@ export default () =>
       />
       <link
         href="https://fonts.googleapis.com/css?family=Alegreya:400,700"
+        rel="stylesheet"
+        type="text/css"
+      />
+      <link
+        href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"
         rel="stylesheet"
         type="text/css"
       />
@@ -137,7 +145,7 @@ export default () =>
     </header>
     <communities className="track-type">
       <h2 id="our-online-communities">Our online communities</h2>
-      <h3 id="open-twin-cities">Open Twin Cities</h3>
+      <Heading id="open-twin-cities" text="Open Twin Cities" />
       <p>
         We are a group of civic hackers, technologists, public servants, and
         community leaders focused on improving the technology of our cities.
@@ -174,7 +182,7 @@ export default () =>
           http://www.opentwincities.org/
         </a>
       </p>
-      <h3 id="react-minneapolis">React Minneapolis</h3>
+      <Heading id="react-minneapolis" text="React Minneapolis" />
       <p>
         <a href="https://reactmpls.slack.com">
           <img
@@ -197,7 +205,7 @@ export default () =>
           https://www.meetup.com/React-Minneapolis-Meetup/
         </a>
       </p>
-      <h3 id="javascript-minnesota">Javascript Minnesota</h3>
+      <Heading id="javascript-minnesota" text="Javascript Minnesota" />
       <p>
         Slack:{" "}
         <a href="https://javascript-mn.slack.com">
@@ -217,7 +225,8 @@ export default () =>
         </a>{" "}
         and you will be emailed a code.
       </p>
-      <h3 id="angularmn">AngularMN</h3>
+
+      <Heading id="angularmn" text="AngularMN" />
       <p>
         <a href="https://angularmn.slack.com">
           <img
@@ -242,7 +251,7 @@ export default () =>
           http://www.meetup.com/AngularMN/
         </a>
       </p>
-      <h3 id="design-minn">Design Minn Slack</h3>
+      <Heading id="design-minn" text="Design Minn Slack" />
       <p>
         Lonely freelancer? Extroverted lurker? Hunting for a gig? We're a Slack
         community for Minnesota based designers. We talk about Print, UI/UX
@@ -259,12 +268,12 @@ export default () =>
           https://design-minn.webflow.io/
         </a>
       </p>
-      <h3 id="minnesota-ux">Minnesota UX Slack</h3>
+      <Heading id="minnesota-ux" text="Minnesota UX Slack" />
       <p>
         Slack: <a href="https://mnux.slack.com">https://mnux.slack.com</a>
       </p>
       <p>Invites: Send an email to: <a href="mailto:scherf.ryan@gmail.com">scherf.ryan@gmail.com</a></p>
-      <h3 id="msptech-slack">MSPTech Slack</h3>
+      <Heading id="msptech-slack" text="MSPTech Slack" />
       <p>
         <a href="https://msptech.slack.com">
           <img
@@ -280,7 +289,7 @@ export default () =>
         Invites:{" "}
         <a href="http://msptech.herokuapp.com">http://msptech.herokuapp.com</a>
       </p>
-      <h3 id="msp-gamedev-slack">MSP Gamedev Slack</h3>
+      <Heading id="msp-gamedev-slack" text="MSP Gamedev Slack" />
       <p>
         <a href="https://mspgamedev.slack.com">
           <img
@@ -299,7 +308,7 @@ export default () =>
           http://mspgamedevslack.herokuapp.com
         </a>
       </p>
-      <h3 id="minnesota-php-user-group">Minnesota PHP User Group</h3>
+      <Heading id="minnesota-php-user-group" text="Minnesota PHP User Group" />
       <p>
         <a href="https://mnphp.slack.com">
           <img
@@ -320,7 +329,7 @@ export default () =>
           http://www.meetup.com/mn-php/
         </a>
       </p>
-      <h3 id="software-devs-of-rochmn">Software Devs of RochMN</h3>
+      <Heading id="software-devs-of-rochmn" text="Software Devs of RochMN" />
       <p>Software developers of Rochester Minnesota</p>
       <p>
         <a href="https://softwaredevsofrochmn.slack.com">
@@ -342,7 +351,7 @@ export default () =>
           http://softwaredevslack.cube.mn
         </a>
       </p>
-      <h3 id="buddy-league">Buddy League</h3>
+      <Heading id="buddy-league" text="Buddy League" />
       <p>A supportive community for friendly creatives.</p>
       <p>
         Slack:{" "}
@@ -360,7 +369,7 @@ export default () =>
           https://www.meetup.com/React-Minneapolis-Meetup/
         </a>
       </p>
-      <h3 id="cocoaheads-mn">CocoaHeads MN</h3>
+      <Heading id="cocoaheadsmn" text="Cocoaheads MN" />
       <p>A community gathering for people interested in developing software for the Apple devices.</p>
       <p>
         Slack:{" "}
@@ -381,7 +390,7 @@ export default () =>
     </communities>
     <conferences className="track-type">
       <h2 id="our-tech-conferences">Our tech conferences</h2>
-      <h3 id="open-source-north">Open Source North</h3>
+      <Heading id="open-source-north" text="Open Source North" />
       <p>
         Website:{" "}
         <a href="http://opensourcenorth.com">http://opensourcenorth.com</a>
@@ -393,16 +402,16 @@ export default () =>
         </a>
       </p>
       <p>Invites: Buy a ticket :)</p>
-      <h3 id="midwest-js">Midwest JS</h3>
+      <Heading id="midwest-js" text="Midwest JS" />
       <p>
         Website: <a href="http://midwestjs.com/">http://midwestjs.com/</a>
       </p>
-      <h3 id="midwest-php">Midwest PHP</h3>
+      <Heading id="midwest-php" text="Midwest PHP" />
       <p>
         Website: <a href="http://midwestphp.org">http://midwestphp.org</a>
       </p>
       <p>Slack: See Minnesota PHP User Group Slack</p>
-      <h3 id="gr8conf-us-grovy-and-grails-">GR8Conf US (Grovy and Grails)</h3>
+      <Heading id="gr8conf-us-grovy-and-grails" text="GR8Conf US (Grovy and Grails)" />
       <p>
         Website: <a href="http://gr8conf.us/#/">http://gr8conf.us/#/</a>
       </p>
