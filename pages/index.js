@@ -1,17 +1,26 @@
 import Head from "next/head";
 
-const Heading = ({id, text}) => (
-  <div><a name={id}></a><h3 id={id} style={{
-    borderTop: "2px dotted #224756",
-    paddingTop: "20px",
-    marginBottom: "6px",
-    paddingBottom: "6px",
-    marginTop: "40px",
-    paddingLeft: "20px",
-    color: "#2f9e98",
-    fontSize: "30px"
-  }}><a href={'#' + id} style={{textDecoration: 'none'}}><i className="ion-link" /> {text}</a></h3></div>
-)
+const Heading = ({ id, text }) =>
+  <div>
+    <a name={id} />
+    <h3
+      id={id}
+      style={{
+        borderTop: "2px dotted #224756",
+        paddingTop: "20px",
+        marginBottom: "6px",
+        paddingBottom: "6px",
+        marginTop: "40px",
+        paddingLeft: "20px",
+        color: "#35b2ab",
+        fontSize: "30px"
+      }}
+    >
+      <a href={"#" + id} style={{ textDecoration: "none", color: "#35b2ab" }}>
+        <i className="ion-link" /> {text}
+      </a>
+    </h3>
+  </div>;
 
 export default () =>
   <div>
@@ -63,20 +72,25 @@ export default () =>
       }
 
       header p {
-        background: #2f9e98;
-        color: #1c1c35;
+        color: #e6a1c3;
         /*margin-left: calc(-50vw + 50%);*/
         margin-top: 0;
         margin-bottom: 0;
-        padding: 20px;
+        padding: 20px 0;
+        line-height: 30px;
       }
 
       header a {
-        color: #1c1c35;
+        color: #ebc8d2;
       }
 
       header strong {
-        color: #760f2c;
+        color: #ebc8d2;
+      }
+
+      .welcome-block {
+        background-color: #dc1377;
+        padding: 30px 50px 20px 50px;
       }
 
       .track-type {
@@ -93,9 +107,9 @@ export default () =>
       }
 
       .track-type h2 {
-        color: #2f9e98;
+        color: #35b2ab;
         padding-top: 20px;
-        padding-left: 5px;
+        padding-left: 20px;
         font-size: 42px;
       }
     `}</style>
@@ -121,31 +135,56 @@ export default () =>
     </Head>
     <header>
       <h1 id="-image-of-minnesota-assets-mn-svg-o-hai-minnesota-">
-        <img src="/static/mn.svg" alt="Image of Minnesota" /> O, Hai Minnesota!
+        <img
+          src="/static/mn.svg"
+          alt="Image of Minnesota"
+          style={{ fill: "red" }}
+        />{" "}
+        O, Hai Minnesota!
       </h1>
-      <p>Ahoy there. </p>
-      <p>
-        The following is a{" "}
-        <strong>
-          currated list of Minnesota&#39;s online tech communities and
-          conferences
-        </strong>{" "}
-        in the areas of tech, design, etc. It is maintained by{" "}
-        <a href="https://twitter.com/jimthedev">@jimthedev</a> in a{" "}
-        <a href="https://github.com/ohaimn/o.hai.mn">Github repository</a>.
-        Please{" "}
-        <a href="https://github.com/ohaimn/o.hai.mn/issues/new">
-          open an issue
-        </a>{" "}
-        to add, modify or delete communities or conferences. If you run your own
-        Slack community, we highly recommend using{" "}
-        <a href="https://github.com/rauchg/slackin">Slackin&#39;</a> to manage
-        public invites. Enjoy! :)
-      </p>
+      <div className="welcome-block">
+        <p style={{ fontSize: "20px", fontWeight: "800", color: "#ebc8d2" }}>
+          <i className="ion-happy" style={{ fontSize: "28px" }} /> Ahoy!
+        </p>
+        <p>
+          Welcome to Minnesota's currated list of{" "}
+          <strong>
+            online tech communities and conferences
+          </strong>{" "}
+          related to tech, design & programming. The o.hai.mn list is maintained by{" "}
+          <a href="https://twitter.com/jimthedev">@jimthedev</a> on this {" "}
+          <a href="https://github.com/ohaimn/o.hai.mn">Github repository</a>. Our tech community exists thanks to the tireless organizing of individual community members. We thank them for their dedication and grit.
+        </p>
+        <p>
+          Please{" "}
+          <a href="https://github.com/ohaimn/o.hai.mn/issues/new">
+            open an issue
+          </a>{" "}
+          to add, modify or delete communities or conferences. If you run your
+          own Slack community, we highly recommend using{" "}
+          <a href="https://github.com/rauchg/slackin">Slackin&#39;</a> to manage
+          public invites.
+        </p>
+        <p
+          style={{
+            fontSize: "20px",
+            fontWeight: "800",
+            textAlign: "right",
+            paddingRight: "30px",
+            paddingBottom: 0,
+            color: "#ebc8d2"
+          }}
+        >
+          ~ Enjoy <i className="ion-coffee" style={{ fontSize: "28px" }} />
+        </p>
+        <p style={{ textAlign: "center", paddingBottom: 0 }}>
+          <a href="#our-online-communities"><i className="ion-chevron-down" /></a>
+        </p>
+      </div>
     </header>
     <communities className="track-type">
       <h2 id="our-online-communities">Our online communities</h2>
-      <Heading id="open-twin-cities" text="Open Twin Cities" />
+      <a name="our-online-communities" /><Heading id="open-twin-cities" text="Open Twin Cities" />
       <p>
         We are a group of civic hackers, technologists, public servants, and
         community leaders focused on improving the technology of our cities.
@@ -272,7 +311,10 @@ export default () =>
       <p>
         Slack: <a href="https://mnux.slack.com">https://mnux.slack.com</a>
       </p>
-      <p>Invites: Send an email to: <a href="mailto:scherf.ryan@gmail.com">scherf.ryan@gmail.com</a></p>
+      <p>
+        Invites: Send an email to:{" "}
+        <a href="mailto:scherf.ryan@gmail.com">scherf.ryan@gmail.com</a>
+      </p>
       <Heading id="msptech-slack" text="MSPTech Slack" />
       <p>
         <a href="https://msptech.slack.com">
@@ -370,7 +412,10 @@ export default () =>
         </a>
       </p>
       <Heading id="cocoaheadsmn" text="Cocoaheads MN" />
-      <p>A community gathering for people interested in developing software for the Apple devices.</p>
+      <p>
+        A community gathering for people interested in developing software for
+        the Apple devices.
+      </p>
       <p>
         Slack:{" "}
         <a href="https://cocoaheadsmn.slack.com/">
@@ -379,13 +424,13 @@ export default () =>
       </p>
       <p>
         Slack invite via email:{" "}
-        <a href="mailto:cocoaheadsmn@pixelresearchlabs.com">cocoaheadsmn@pixelresearchlabs.com</a>
+        <a href="mailto:cocoaheadsmn@pixelresearchlabs.com">
+          cocoaheadsmn@pixelresearchlabs.com
+        </a>
       </p>
       <p>
         Website:{" "}
-        <a href="http://www.cocoaheadsmn.org/">
-          http://www.cocoaheadsmn.org/
-        </a>
+        <a href="http://www.cocoaheadsmn.org/">http://www.cocoaheadsmn.org/</a>
       </p>
     </communities>
     <conferences className="track-type">
@@ -411,7 +456,10 @@ export default () =>
         Website: <a href="http://midwestphp.org">http://midwestphp.org</a>
       </p>
       <p>Slack: See Minnesota PHP User Group Slack</p>
-      <Heading id="gr8conf-us-grovy-and-grails" text="GR8Conf US (Grovy and Grails)" />
+      <Heading
+        id="gr8conf-us-grovy-and-grails"
+        text="GR8Conf US (Grovy and Grails)"
+      />
       <p>
         Website: <a href="http://gr8conf.us/#/">http://gr8conf.us/#/</a>
       </p>
