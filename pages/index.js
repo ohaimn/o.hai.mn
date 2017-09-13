@@ -263,7 +263,7 @@ export default () =>
       <p>
         Slack: <a href="https://mnux.slack.com">https://mnux.slack.com</a>
       </p>
-      <p>Invites: Send an email to: scherf.ryan@gmail.com</p>
+      <p>Invites: Send an email to: <a href="mailto:scherf.ryan@gmail.com">scherf.ryan@gmail.com</a></p>
       <h3 id="msptech-slack">MSPTech Slack</h3>
       <p>
         <a href="https://msptech.slack.com">
@@ -346,7 +346,7 @@ export default () =>
       <p>A supportive community for friendly creatives.</p>
       <p>
         Slack:{" "}
-        <a href="https://buddyleague.slack.com ">
+        <a href="https://buddyleague.slack.com">
           https://buddyleague.slack.com{" "}
         </a>
       </p>
@@ -358,6 +358,24 @@ export default () =>
         Meetup group:{" "}
         <a href="https://www.meetup.com/React-Minneapolis-Meetup/">
           https://www.meetup.com/React-Minneapolis-Meetup/
+        </a>
+      </p>
+      <h3 id="cocoaheads-mn">CocoaHeads MN</h3>
+      <p>A community gathering for people interested in developing software for the Apple devices.</p>
+      <p>
+        Slack:{" "}
+        <a href="https://cocoaheadsmn.slack.com/">
+          https://cocoaheadsmn.slack.com/{" "}
+        </a>
+      </p>
+      <p>
+        Slack invite via email:{" "}
+        <a href="mailto:cocoaheadsmn@pixelresearchlabs.com">cocoaheadsmn@pixelresearchlabs.com</a>
+      </p>
+      <p>
+        Website:{" "}
+        <a href="http://www.cocoaheadsmn.org/">
+          http://www.cocoaheadsmn.org/
         </a>
       </p>
     </communities>
