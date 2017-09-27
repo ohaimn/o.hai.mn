@@ -147,7 +147,7 @@ export default () =>
           <i className="ion-happy" style={{ fontSize: "28px" }} /> Ahoy!
         </p>
         <p>
-          Welcome to Minnesota's currated list of{" "}
+          Welcome to Minnesota's curated list of{" "}
           <strong>
             online tech communities and conferences
           </strong>{" "}
